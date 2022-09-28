@@ -24,3 +24,10 @@ let Producto1 = {
  // ARRAYS Y METODOS 
  const modelos = ["Moño Velvet", "Moño Rock" , "Moño yellow" , "Moño Paz"];
 console.log (modelos.indexOf ("Moño yellow"));
+//INTERACTUANDO CON EVENTO - TECLA ENTER
+function respuesta () {
+    console.log ("click");
+    }
+    let boton = document.getElementById ("boton");
+    boton.addEventListener("click" , respuesta);
+    
