@@ -6,12 +6,14 @@ const iva = x => x * 0.21;
 let precioProducto1 = 1500;
 let precioProducto2 = 1800;
 let descuento = 150;
+let cupon = 300;
 
 let nuevoPrecio1 = resta (suma (precioProducto1, iva (precioProducto1)), descuento);
 console.log (nuevoPrecio1);
 
 let nuevoPrecio2 = resta (suma (precioProducto2, iva (precioProducto2)), descuento);
 console.log (nuevoPrecio2);
+let nuevoPrecio3 =
 // Objetos de JavaScript
 
 let Producto1 = {
@@ -30,4 +32,17 @@ function respuesta () {
     }
     let boton = document.getElementById ("boton");
     boton.addEventListener("click" , respuesta);
+    //CREANDO UN ELEMENTO DESDE JAVASCRIPT
+ const lista = document.getElementById ("lista");
+ 
+ const arrayItem = ["primer moño", "segundo moño" , "tercer moño" , "cuarto moño"];
+
+const fragment = document.createDocumentFragment ();
+
+arrayItem.forEach (item => {
+    const li = document.createElement ("li");
+    li.textContent = item;
+    fragment.appendChild (li);
     
+});
+lista.appendChild (fragment);
