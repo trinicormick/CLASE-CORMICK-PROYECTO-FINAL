@@ -52,10 +52,12 @@ function respuesta () {
     console.log ("click");
     }
     let pagar = document.getElementById ("COMPRAR");
-    pagar.addEventListener("click" , Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'TU COMPRA SE REALIZO CON EXITO',
-        showConfirmButton: false,
-        timer: 1500
-      }));
+    pagar.addEventListener("click" , () => {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'tu compra se realizo con exito',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    });
