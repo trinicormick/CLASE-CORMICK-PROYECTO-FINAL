@@ -46,3 +46,16 @@ arrayItem.forEach (item => {
     
 });
 lista.appendChild (fragment);
+
+// UTILIZAMOS LIBRERIA PARA ACREDITAR QUE LA COMPRA SE REALIZO CON EXITO 
+function respuesta () {
+    console.log ("click");
+    }
+    let pagar = document.getElementById ("COMPRAR");
+    pagar.addEventListener("click" , Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'TU COMPRA SE REALIZO CON EXITO',
+        showConfirmButton: false,
+        timer: 1500
+      }));
