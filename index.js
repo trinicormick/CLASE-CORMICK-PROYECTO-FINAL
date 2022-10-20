@@ -61,3 +61,18 @@ function respuesta () {
             timer: 1500
           })
     });
+     //LLAMANDO AL DATA.JSON APLICANDO FETCH
+     fetch ("./data.json");
+     then (response => response.json ());
+     then (data => {
+        data.forEach (Producto1 => {
+            const li = document.createElement ("li");
+            li.innerHTML =
+            <h2>${Producto1.nombre}</h2>;
+            <p> ${Producto1.precioProducto1}</p>;
+            <hr/>
+            `;
+            listado.append (li);
+        });
+
+     });
