@@ -1,5 +1,36 @@
-// variables de JS necesarias y funcion escencial del proceso a simular
-const suma =(a,b) => a + b;
+var nombre;
+nombre = prompt ("escribe tu email para recibir novedades", "e-mail");
+alert ("Ahora recibiras promociones y novedades");
+document.addEventListener("DOMContentLoaded", () => {
+    fetchData ()
+})
+const fetchData = async () => {
+    try {
+        const res = await fetch ('data.json')
+        const data =await res.json ()
+        console.log (data)
+    } catch (error) {
+        console.log (error)
+    }
+}
+let pagar = document.getElementById ("comprar");
+    pagar.addEventListener("click" , () => {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'agregado al carrito de compras',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    });
+    
+    
+      
+    // ARRAYS Y METODOS 
+ const modelos = ["Moño Velvet", "Moño rock"];
+console.log (modelos.indexOf ("Moño rock"));
+ // FUNCIONES
+ const suma =(a,b) => a + b;
 const resta =(a,b) => a - b;
 const iva = x => x * 0.21;
 
@@ -16,63 +47,19 @@ console.log (nuevoPrecio2);
 let nuevoPrecio3 =
 // Objetos de JavaScript
 
-let Producto1 = {
+let , producto1 = {
     nombre : "Moño Velvet",
     color : "Rojo",
 };
  console.log (Producto1);
+// CONDICIONALES 
+let cuponBoton = document.getElementById ("si");
+let Cupon ="si";
+if (Cupon == "si") {
+    console.log ("si tengo cupon");
+
+}else {
+    console.log ("no tengo cupon");
+};
 
 
- // ARRAYS Y METODOS 
- const modelos = ["Moño Velvet", "Moño Rock" , "Moño yellow" , "Moño Paz"];
-console.log (modelos.indexOf ("Moño yellow"));
-//INTERACTUANDO CON EVENTO - TECLA ENTER
-function respuesta () {
-    console.log ("click");
-    }
-    let boton = document.getElementById ("boton");
-    boton.addEventListener("click" , respuesta);
-    //CREANDO UN ELEMENTO DESDE JAVASCRIPT
- const lista = document.getElementById ("lista");
- 
- const arrayItem = ["primer moño", "segundo moño" , "tercer moño" , "cuarto moño"];
-
-const fragment = document.createDocumentFragment ();
-
-arrayItem.forEach (item => {
-    const li = document.createElement ("li");
-    li.textContent = item;
-    fragment.appendChild (li);
-    
-});
-lista.appendChild (fragment);
-
-// UTILIZAMOS LIBRERIA PARA ACREDITAR QUE LA COMPRA SE REALIZO CON EXITO 
-function respuesta () {
-    console.log ("click");
-    }
-    let pagar = document.getElementById ("COMPRAR");
-    pagar.addEventListener("click" , () => {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'tu compra se realizo con exito',
-            showConfirmButton: false,
-            timer: 1500
-          })
-    });
-     //LLAMANDO AL DATA.JSON APLICANDO FETCH
-     fetch ("./data.json");
-     then (response => response.json ());
-     then (data => {
-        data.forEach (Producto1 => {
-            const li = document.createElement ("li");
-            li.innerHTML =
-            <h2>${Producto1.nombre}</h2>;
-            <p> ${Producto1.precioProducto1}</p>;
-            <hr/>
-            `;
-            listado.append (li);
-        });
-
-     });

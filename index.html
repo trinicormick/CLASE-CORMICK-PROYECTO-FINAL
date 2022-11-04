@@ -5,28 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <div>
-            <img src="" alt="">
-        </div>
-    </header>
-    <main>
-        <button id="boton">ENTER</button>
-        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae mollitia quia vel alias deserunt autem quaerat fugit tenetur, dignissimos quam, nisi culpa praesentium soluta excepturi adipisci repellendus minus optio temporibus.</h1>
-         <ul id="lista">
+    <div class="contenedor">
+        <h1 class="text-center"> Carrito de moñitos</h1>
+        <hr>
+        <div class="row" id="contenedor-productos">
+          
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/moñovelvet.jpg" class="card-img-top" alt="MOÑO PRODUCTO 1">
+                        <div class="card-body">
+                          <h5 class="card-title">Moño Velvet</h5>
+                          <p class="card-text">$ <span>500</span></p>
+                          <button class="btn btn-primary" id="comprar">COMPRAR</button>
+                          
+                        </div>
+                      </div>
+                <div class="col-12 col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/moñorock.jpg" class="card-img-top" alt="MOÑO PRODUCTO 1">
+                        <div class="card-body">
+                        <h5 class="card-title">Moño Rock</h5>
+                        <p class="card-text">$ <span>1500</span></p>
+                        <button class="btn btn-primary" id="descuento">utiliza tu cupon de descuento</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3">
+                    <button class="btn btn-outline-secondary" type="button" id="cupon">quiero usar mi cupon de descuento</button>
+                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+</div>
+                        
 
-         </ul>
-         <button id="pagar">COMPRAR</button>
-    </main>
-    <footer>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, quam neque ducimus assumenda sapiente sequi beatae eius consequuntur in facilis similique optio minima maxime quasi libero error ullam eveniet asperiores!
-        </p>
-    </footer>
-    <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css">
-    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+                </div>
+                
+                      
+</div>
+      
+            
+            
+
+        </div>
+        
+
+    </div>
+    
+    
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
  <script src="./index.js"></script>   
 </body>
 </html>
